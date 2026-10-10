@@ -1,0 +1,38 @@
+{
+  "name": "devloom",
+  "version": "1.0.0",
+  "description": "Developer assistant MCP server for Alexa+",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev:server": "tsx watch src/app.ts",
+    "dev:ui": "vite",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:ui\"",
+    "build": "vite build",
+    "start": "node dist/server.js",
+    "inspect": "npx @modelcontextprotocol/inspector tsx src/app.ts"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "sara.devpost",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@google/genai": "^2.27.0",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "@octokit/rest": "^22.0.1",
+    "@vercel/sdk": "^1.28.35",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.0",
+    "express": "^5.2.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.2",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}

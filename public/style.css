@@ -1,0 +1,198 @@
+:root {
+  --palegreen: #98fb98;
+  --springgreen: #00ff7f;
+  --turquoise: #00ff7f;
+  --lime: #00ff7f;
+  --limegreen: #32cd32;
+  --emerald: #2ecc71;
+  --lightseagreen: #20b2aa;
+  --dodgerblue: #1e90ff;
+  --glassColor: rgba(255, 255, 255, 0.2);
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  --animation: 0.3s ease-in-out;
+}
+
+.glassEffect {
+  /* 2. The blur effect applied to the background behind the card */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Support for Safari */
+
+  /* 3. A thin border to mimic the edge of glass (Optional) */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  /* 4. A soft shadow for depth (Optional) */
+  box-shadow: 0 8px 3px 0 rgba(0, 0, 0, 0.3);
+
+  /* Basic styling */
+  border-radius: 12px;
+  padding: 20px;
+  transition:
+    transform var(--animation),
+    box-shadow var(--animation);
+  will-change: transform;
+}
+
+.glassEffect:hover {
+  /* Pops UP (negative Y), Skews horizontally slightly, and scales up 3% */
+  transform: translateY(-2px) skewX(4deg) scale(1.03);
+
+  /* Deepens the shadow to mimic being closer to the screen */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* from below are actual HTML elements etc */
+
+html {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body {
+  background: linear-gradient(
+    to bottom right,
+    var(--palegreen),
+    var(--springgreen),
+    var(--turquoise),
+    var(--lime),
+    var(--emerald)
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+#sidebar {
+  z-index: 2;
+  background: var(--glassColor);
+  width: fit-content;
+  max-width: 20%;
+  height: fit-content;
+  position: fixed;
+  left: 0.1%;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.sidebarItem {
+  background-color: var(--dodgerblue);
+  color: white;
+  width: auto;
+  height: auto;
+  padding: 1%;
+  margin: 1%;
+  border: solid 2px black;
+  justify-self: center;
+  align-self: center;
+  transition:
+    transform var(--animation),
+    box-shadow var(--animation);
+}
+
+.sidebarItem:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow);
+}
+
+#inputDiv {
+  z-index: 20;
+  display: flex;
+  width: 50%;
+  height: fit-content;
+  padding: 2%;
+  justify-items: center;
+  align-items: center;
+  position: fixed;
+  justify-self: center;
+  bottom: 2%;
+  background-color: var(--glassColor);
+}
+
+#chatInput {
+  display: inline-block;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border: solid 1px black;
+  border-radius: 1%;
+  padding: 1%;
+  white-space: nowrap;
+  overflow: auto;
+  background-color: white;
+  resize: vertical;
+  box-shadow: -2px 2px 2px 2px rgba(0, 0, 0, 0.322);
+  width: 90%;
+  height: 20%;
+  min-height: 5px;
+  max-height: 150px;
+  transition: transform var(--animation);
+}
+
+#chatInput:hover {
+  transform: scale(1.01);
+}
+
+#chatBtn {
+  display: flex;
+  width: 8%;
+  height: 30px;
+  background-color: var(--dodgerblue);
+  /* justify-content: center; */
+  /* align-content: center; */
+  align-items: self-end;
+  justify-content: center;
+  margin-left: 1%;
+  border: 1px solid black;
+  transition: transform 0.3s ease-in-out;
+}
+
+#chatBtn:hover {
+  transform: scale(1.1);
+}
+
+#chatBtn:active {
+  background-color: var(--limegreen);
+}
+
+.chatContainer {
+  background-color: none;
+  /* margin: 0px; */
+  width: 90vw;
+  min-height: 10vh;
+  height: 90%;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  padding: 1%;
+  padding-bottom: 10%;
+  justify-items: left;
+  flex-direction: column; /* This forces the items to stack vertically */
+  gap: 15px; /* Adds clean spacing between each message */
+  overflow-y: auto; /* Allows scrolling up/down when chat gets long :D*/
+  overflow-x: hidden; /* Prevents accidental sideways scrolling */
+  /* below is the part which makes the scrollbar dissapear */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+#chatInnerDiv {
+  width: 60%;
+  height: fit-content;
+  background-color: aqua;
+  margin-left: auto;
+  border: 1px solid black;
+}
+
+#promptDiv {
+  width: 60%;
+  height: fit-content;
+  background-color: var(--dodgerblue);
+  border: 1px solid black;
+}

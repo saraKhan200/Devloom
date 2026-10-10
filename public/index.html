@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="svg" href="./logo.svg" width="32px" height="32px" />
+    <title>Devloom</title>
+  </head>
+  <body>
+    <!-- <h1>elo world</h1> -->
+    <div id="sidebar" class="glassEffect">
+      <button title="Open the DevLoom GitHub repository" class="sidebarItem">
+        Github Repo
+        <i
+          class="fa-brands fa-github fa-flip"
+          style="color: rgb(255, 255, 255)"
+        ></i>
+      </button>
+      <button
+        title="Enter your Gemini API key"
+        class="sidebarItem"
+        id="geminiBtn"
+      >
+        Enter Gemini API key
+        <i class="fa-solid fa-key" style="color: rgb(255, 255, 255)"></i>
+      </button>
+      <button
+        title="A input field will come down , input your Github Access API key for this to function , the API key is safe as its stored per session via js variables so a reload will erase that key , see github repo for more details"
+        class="sidebarItem"
+        id="githubBtn"
+      >
+        Enter Github Access Token
+        <i class="fa-brands fa-github" style="color: rgb(255, 255, 255)"></i>
+      </button>
+    </div>
+    <!-- below is the input field -->
+    <div class="glassEffect" id="inputDiv">
+      <div
+        contenteditable="true"
+        placeholder="Type a github event your want the AI to do :D... see the github repo for more detaisl !!"
+        type="text"
+        id="chatInput"
+        title="Put in words , what you want the gemini AI todo for you useing the MCP server!"
+      ></div>
+      <button title="send the message" id="chatBtn">
+        <i
+          class="fa-solid fa-paper-plane fa-float"
+          style="color: rgb(255, 255, 255)"
+        ></i>
+      </button>
+    </div>
+    <!-- below is the main div where chat content is displayed -->
+    <div class="chatContainer" id="chatBox">
+      <!-- <div class="glassEffect" id="chatInnerDiv">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus est
+        quam sed voluptatem corporis fugit aspernatur aliquid nulla blanditiis
+        facilis ratione aut animi, itaque suscipit dolorem dolores consequuntur
+        nobis dicta?
+      </div>
+      <div class="glassEffect" id="promptDiv">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus est
+        quam sed voluptatem corporis fugit aspernatur aliquid nulla blanditiis
+        facilis ratione aut animi, itaque suscipit dolorem dolores consequuntur
+        nobis dicta?
+      </div> -->
+    </div>
+    <!-- below is the main js file -->
+    <script src="./app.js"></script>
+  </body>
+</html>
