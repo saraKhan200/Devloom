@@ -16,8 +16,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Serve static frontend UI from the public directory
-app.use(express.static(path.join(__dirname, "../public")));
+// Serve the Vite build in production and source files during local development.
+const frontendPath =
+  config.nodeEnv === "production"
+    ? path.resolve(__dirname, "../../public/dist")
+    : path.resolve(__dirname, "../public");
+app.use(express.static(frontendPath));
 
 // Instantiate the MCP Server containing all registered GitHub tools
 const mcpServer = createMcpServer();
