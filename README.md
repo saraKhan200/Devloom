@@ -1,8 +1,16 @@
 # DevLoom 
-## Note-This is the production grade branch for the branch , made to be able to fit and be insantly deployed on platforms like reder.com
+
+> [!NOTE]
+> This is the production grade branch for Production , made to be able to fit and be insantly deployed on platforms like reder.com
+
+
 **Turn GitHub busywork into a conversation.** DevLoom is a Developer first GitHub assistant built around the Model Context Protocol (MCP). Ask for repository context in plain language; Gemini can choose from DevLoom's GitHub tools, run them through MCP, and turn the results into a concise response.
 
 The project includes a browser demo and an SSE-based MCP server. It gives teams a practical starting point for exploring natural-language developer workflows and building new MCP-powered ideas together.
+
+
+> [!TIP]
+> You can try the Live website demo of the MCP [here](https://devloom.onrender.com/) , its hosted on reder.com so it might take less than 1 minute time to load  if not visited recently :) .
 
 ## Why DevLoom
 
