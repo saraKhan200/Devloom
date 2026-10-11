@@ -1,5 +1,12 @@
 # DevLoom
 
+![TypeScript](https://shields.io) ![JavaScript](https://shields.io) ![Node.js](https://shields.io) ![Express.js](https://shields.io) ![Zod](https://shields.io) ![MCP Server](https://shields.io)
+
+
+> [!NOTE]
+> This branch "main" is based on to run locally , for production ready code see the branch [production](https://github.com/saraKhan200/Devloom/tree/Production)
+
+
 **Turn GitHub busywork into a conversation.** DevLoom is a Developer first GitHub assistant built around the Model Context Protocol (MCP). Ask for repository context in plain language; Gemini can choose from DevLoom's GitHub tools, run them through MCP, and turn the results into a concise response.
 
 The project includes a browser demo and an SSE-based MCP server. It gives teams a practical starting point for exploring natural-language developer workflows and building new MCP-powered ideas together.
@@ -7,6 +14,10 @@ The project includes a browser demo and an SSE-based MCP server. It gives teams 
 ## Why DevLoom
 
 During a hackathon, incident, release rush, or focused coding session or even a morning code recall news :D, changing context between an editor, GitHub pages, and the terminal costs time. DevLoom brings common repository actions into one prompt-driven workflow: inspect branches and pull requests, find issues, look up releases, or perform selected write actions without hand-building each API request.
+
+> [!TIP]
+> You can try the Live website demo of the MCP [here](https://devloom.onrender.com/) , its hosted on reder.com so it might take less than 1 minute time to load  if not visited recently :) .
+
 
 Useful for:
 
