@@ -3,6 +3,7 @@
 > [!NOTE]
 > This branch "main" is based on to run locally , for production ready code see the branch [production](https://github.com/saraKhan200/Devloom/tree/Production)
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/sarakhan200-devloom-wiex8t?v=0306aa48909dac424cd2b4b21d1805ba)](https://m8ven.ai/mcp/sarakhan200-devloom-wiex8t?s=readme)
 
 **Turn GitHub busywork into a conversation.** DevLoom is a Developer first GitHub assistant built around the Model Context Protocol (MCP). Ask for repository context in plain language; Gemini can choose from DevLoom's GitHub tools, run them through MCP, and turn the results into a concise response.
 
